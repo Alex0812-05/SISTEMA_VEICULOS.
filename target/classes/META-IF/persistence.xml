@@ -1,0 +1,22 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="sistema_veiculos" transaction-type="RESOURCE_LOCAL">
+        <class>com.sistemaveiculos.AutomovelDomestico</class>
+        <class>com.sistemaveiculos.Motocicleta</class>
+        <class>com.sistemaveiculos.Caminhao</class>
+        <class>com.sistemaveiculos.Bicicleta</class>
+        <class>com.sistemaveiculos.Skate</class>
+        <properties>
+            <!-- Configuração do Banco de Dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sistema_veiculos" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="sua_senha" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+            <!-- Configuração do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
